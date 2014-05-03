@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Note.create([
+  {
+    title: "First Note",
+    content: "This is the first note.",
+    tag_list: "javascript, tutorial"
+  },
+  {
+    title: "Second Note",
+    content: "This is the second note.",
+    tag_list: "systems"
+  }
+])
