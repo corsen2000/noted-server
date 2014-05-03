@@ -4,7 +4,12 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    if params[:tags]
+      tags = params[:tags].split(',')
+      @notes = Note.tagged_with(tags)
+    else
+      @notes = Note.all
+    end
   end
 
   # GET /notes/1
