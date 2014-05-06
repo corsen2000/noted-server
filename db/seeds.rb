@@ -6,15 +6,25 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.create([
+  {
+    email: 'test@test.com',
+    password: 'test',
+    auth_token: 'token'
+  }
+])
+
 Note.create([
   {
     title: "First Note",
     content: "This is the first note.",
-    tag_list: "javascript, tutorial"
+    tag_list: "javascript, tutorial",
+    user_id: 1
   },
   {
     title: "Second Note",
     content: "This is the second note.",
-    tag_list: "systems"
+    tag_list: "systems",
+    user_id: 1
   }
 ])

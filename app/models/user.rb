@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_secure_password
   validates_presence_of :password, :on => :create
   before_create :set_auth_token
+  has_many :notes
 
   private
     def set_auth_token
