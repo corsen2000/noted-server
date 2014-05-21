@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, defaults: { format: :json }
   resources :notes, defaults: { format: :json }
   resources :sessions, defaults: { format: :json }
 
