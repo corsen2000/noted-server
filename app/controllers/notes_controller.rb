@@ -7,9 +7,9 @@ class NotesController < ApplicationController
   def index
     if params[:tags]
       tags = params[:tags].split(',')
-      @notes = Note.tagged_with(tags)
+      @notes = Note.tagged_with(tags).where(user: @current_user)
     else
-      @notes = Note.all
+      @notes = Note.all.where(user: @current_user)
     end
   end
 
